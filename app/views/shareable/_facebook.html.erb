@@ -34,7 +34,7 @@
       $('head').append("<script><%= raw(render 'shareable/partials/scripts/head/facebook', :app_id=>options[:app_id]) %><\/script>");
     }
   };
-  if (typeof $.turbo === 'undefined') {
+  if ( typeof $ === 'undefined' ) {
     $(function() {
       return __loadFacebook();
     });
