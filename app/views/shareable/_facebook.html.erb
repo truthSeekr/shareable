@@ -26,6 +26,7 @@
   <% if options[:turbolinks] && !options[:button_only] %>
     <%= output_once :facebook do %>
 <script>
+document.addEventListener("DOMContentLoaded", function(event) { 
   if (typeof window.facebookLoaded == 'undefined') {
     var facebookLoaded = false;
   }
@@ -43,6 +44,8 @@
   else {
     __loadFacebook();  
   }
+});
+  
 </script>
     <% end %>
   <% end %>
